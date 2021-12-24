@@ -1,0 +1,78 @@
+
+<!-- saved from url=(0040)http://127.0.0.1:5500/My%20arty/art.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Koala</title></head>
+     <body>
+        <link rel="stylesheet" href="./Koala_files/css">
+  
+         <div class="container">   
+            <div class="left ear"></div>
+             <div class="face">
+             <div class="eyes left">
+                 <div class="pupil left" id="leftp"></div></div> 
+                 <div class="eyes"> 
+                    <div class="pupil right" id="rightp"></div>
+                 </div>
+                 <div class="nose"></div> 
+             </div>
+             <div class="right ear"></div>
+         </div>
+         <span>By: Katie El-Masry</span>
+         <style>
+            body{ background-color:rgb(24, 121, 56)}
+            .container{display:flex;  height:100%;
+                width:100%;
+            flex-wrap: nowrap; align-items:center; justify-content:center;}
+            .face{z-index: 2; background-color: rgb(182, 179, 207); height:300px;  
+            width:300px; border-radius:300px; display: flex; justify-content: center;}
+            .pupil{ background-color:black; height:28px; width:26px; flex-wrap: nowrap;;
+            border-radius:50px; margin:10px; position: relative; top:30%; }
+            #rightp{left:20%} #leftp{left:30%}
+            .eyes{background-color:white; height:100px; width:95px;
+            border-radius:68px; margin:-1px; position: relative; top:25%; left:12%}
+            .nose{background-color: rgb(165, 117, 29);  position: relative; top:45%; right:30%;
+                height:115px; width:70px;   border-radius:40px;}
+            .ear{ height:150px; width:150px; border-radius:180px; position: relative; bottom:6%;
+                 background-color:rgb(88, 88, 109); z-index:1;
+                border: solid  rgb(182, 179, 207) 20px; margin:-110px; }
+            span{font-size:18pt; font-family: "Tangerine"; font-weight:bolder; background-color: rgba(255, 255, 255, 0.658);
+                 position: relative; bottom:18%; width:300px;}
+        </style>
+     <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+ <iframe src="./Koala_files/globalstorage.html" style="position: absolute; width: 1px; height: 1px; left: -9999px;"></iframe></body></html>

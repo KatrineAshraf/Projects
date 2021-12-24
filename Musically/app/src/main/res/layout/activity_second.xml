@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:transitionName="background_image_transition">
+    <View
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"/>
+
+    <TextView
+        android:id="@+id/second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:background="#6DFFFFFF"
+        android:layout_marginLeft="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="artist"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_songtitle"
+      />
+
+    <TextView
+        android:id="@+id/second_songtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="18dp"
+        android:background="#6DFFFFFF"
+        android:fontFamily="sans-serif-thin"
+        android:text="Song"
+        android:textColor="@color/black"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+/>
+    <ImageView
+        android:id="@+id/second_back_arrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="356dp"
+        android:layout_marginRight="356dp"
+        android:background="#6DFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/second_songtitle"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_back_arrow"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:scrollbars="none"
+        android:layout_marginTop="417dp"
+        app:layout_constraintTop_toBottomOf="@id/second_title"
+        app:layout_constraintBottom_toTopOf="@id/seconf_arrow_up">
+        <TextView
+            android:id="@+id/second_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginLeft="18dp"
+            android:alpha="0.7"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="@color/black"
+            android:background="#1f2f2f"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/second_title"
+            app:layout_constraintTop_toBottomOf="@+id/second_title" />
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/seconf_arrow_up"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="185.5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="185.5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_up_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/more_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+
+    <TextView
+        android:id="@+id/more_details"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Listen Now"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seconf_arrow_up"
+        app:layout_constraintVertical_bias="0.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CBDDD9">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/LeftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="56dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/RightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="56dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Toppicguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="90dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btmpicguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="390dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topseekguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="455dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btmseekguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="454dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/btnguide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="655dp" />
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="56dp"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/RightGuide"
+        app:layout_constraintStart_toStartOf="@+id/LeftGuide"
+
+        app:layout_constraintTop_toBottomOf="@+id/Toppicguide">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/MusicImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                />
+
+            <TextView
+                android:id="@+id/Song"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ellipsize="marquee"
+                android:fontFamily="cursive"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/RightGuide"
+            app:layout_constraintStart_toStartOf="@+id/LeftGuide"
+            app:layout_constraintTop_toBottomOf="@+id/btmpicguide">
+
+            <TextView
+                android:id="@+id/TxtSongStart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:textColor="#888"
+                android:text="0:00"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <SeekBar
+                android:id="@+id/SeekBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="20dp" />
+
+
+            <TextView
+                android:textColor="#888"
+                android:id="@+id/TxtSongEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+
+                android:singleLine="true"
+                android:text="0:00"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/album"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BtnFastRewind"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rewind_icon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BtnStop"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_stop_circle_24" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BtnPlay"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/pause_song_icon" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BtnFastForward"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/forward_icon" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="-40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/LeftGuide" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

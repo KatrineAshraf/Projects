@@ -1,0 +1,117 @@
+
+<!-- saved from url=(0040)http://127.0.0.1:5500/My%20arty/two.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>eyes</title></head>
+    <body>
+        <link rel="stylesheet" href="./eyes_files/css">
+        <div class="container">
+            <div class="two body" id="one"><div class="two a body"></div></div>
+            <div class="top body">
+              
+
+            </div>
+            <div class="middle body">
+                <div class="eyes Le">
+                    <div class="pupil L"></div>
+                </div>
+                <div class="eyes Re">
+                    <div class="pupil R"></div>
+                </div>
+            </div>
+             <div class="bottom body">
+                 <div class="lip"></div>
+             </div>
+             <div class="stick body">
+              <div class="one body"></div>
+                 <div class="one body"></div> 
+             </div>
+        </div>
+        <span>By: Katie El-Masry</span>
+        <style>
+            body{background-color: cyan;}
+            .container{border: 4px orange dotted;
+                height:100%; width:100%;
+                 justify-content: center;
+                  align-items: center;
+            display:flex; flex-direction: column;}
+            .body{width:250px; height:62px;
+               /**  border:black solid ;**/}
+            .top{height:300px; border-top-left-radius: 200px; background-color: rgb(250, 242, 218);
+                 border-top-right-radius: 100px; display:flex; justify-content: right;} 
+            .bottom{border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;
+            background-color: rgb(124, 45, 8);z-index:1 ;}    
+            .middle{background-color: rgb(150, 120, 64); display: flex;}
+            .stick{height: 200px; border-right: solid 10px rgb(182, 135, 35); ; background-color: rgb(212, 158, 41); width:90px; display:grid; grid-template-areas:
+            "tp tp tp" ; border-bottom-right-radius: 60px; border-bottom-left-radius: 60px; }
+            .one{ width:54px; height:80px; border-radius:60% 40% 33% 67% / 63% 74% 26% 37%  ; 
+            background-color: rgba(109, 39, 6, 0.719);;  position:relative; left:2px; top: -40px; margin:-3px;}
+            .two{width:128px; height:138px; border-radius: 100% 0% 0% 100% / 1% 100% 0% 99%;
+            display:flex; justify-content: right; border-top-left-radius: 50px ;
+        background-color:  rgb(216, 142, 6); z-index:0; position: relative; bottom:4px;}
+           #one{position: relative; top:137px; left:58px;}
+        .a{width:155px; height:135px; border-radius:100% 0% 0% 100% / 0% 16% 84% 100%  ; background-color: cyan; position: relative; left:20px;}
+        .eyes{width:100px; height:100px; background-color: #fff; border: 3px solid #000;
+             border-radius: 100px; position: relative; bottom: 65px; right:10px; margin: 8px; z-index:2;}
+       .Re{position: relative; left:15px;}
+       .pupil{ position:relative; border-radius: 70px; height:20px;
+         width: 20px; border: 20px  solid black; animation: eyes; animation-duration: 2s; animation-fill-mode: alternate;
+        animation-iteration-count: infinite;}
+        @keyframes eyes {
+            0%{top:0%; left:0%}
+            25%{top:40%; left:0%}
+            50%{top:40%; left:40%}
+            75%{top:0%; left:40%}
+            100%{top:0%; left:0%; }
+        }
+        .lip{border-radius:50px ; background-color: #fff; position: relative;
+        border:solid black 5px; z-index:2; width:30px; height:30px; left:30%;animation: lip; animation-duration: 2s; animation-fill-mode: alternate;
+        animation-iteration-count: infinite; bottom: 9px;}
+        span{font-size:24pt; font-family: "Tangerine"; font-weight:bolder; background-color: rgba(255, 255, 255, 0.658);
+                 position: relative; bottom:8%; width:300px; left:3%}
+        @keyframes lip {
+            0%{left: 50%}
+            25%{left: 50%}
+            50%{left:30%}
+            75%{left:30%}
+            100%{left:50%}
+            
+        }
+   </style>
+    <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<iframe src="./eyes_files/globalstorage.html" style="position: absolute; width: 1px; height: 1px; left: -9999px;"></iframe></body></html>
